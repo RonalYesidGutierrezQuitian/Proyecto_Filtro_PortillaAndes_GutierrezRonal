@@ -1,0 +1,191 @@
+:root{
+    --first-color: rgb(255,114,27);
+    --body-color: rgb(255, 255, 255);
+    --background-image: url(./../img/pexels-pixabay-159400@2x.png);
+    --delay-logo: 3.5s;
+    --delay-login: 3s;
+}
+
+
+
+
+*{
+    margin: 0;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/*===== REUSABLE ======*/
+.d-flex{
+    display: flex;
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.mb-3{
+    margin-bottom: 3rem;
+}
+
+.center-content-column{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+
+/**/
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 1rem;
+}
+
+.form-control input{
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.527);
+   
+}
+
+.button{
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--first-color);
+    text-decoration: none;
+    color: var(--body-color);
+    font-weight: 900;
+}
+
+.dialog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background-image: var(--background-image);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.dialog-content{
+    width: 80%;
+    max-width: 800px;
+    background-color: var(--body-color);
+    border-radius: 25px;
+    border: none;
+    padding: 2rem;
+    margin: auto;
+}
+
+.profile-image{
+    max-width: 150px;
+    border-radius: 100%;
+}
+
+#logo{
+    margin: auto;
+    visibility: hidden;
+    animation: startPage var(--delay-logo)
+}
+
+#login{
+    position: absolute;
+    top: auto;
+    left: -100%;
+    animation: showModal 3s;
+    animation-delay: var(--delay-logo);
+    animation-fill-mode: forwards;
+}
+
+#welcome{
+    position: absolute;
+    top: 0;
+    left: auto;
+    padding: 4rem;
+}
+
+.logo{
+    max-width: 125px;
+}
+
+
+
+/* Media Queries */
+@keyframes startPage {
+    5% {
+        visibility: visible;
+    }
+
+    34.9% {
+        visibility: visible;
+    }
+
+    35% {
+        visibility: hidden;
+    }
+
+    59.9% {
+        visibility: hidden;
+    }
+
+    60% {
+        visibility: visible;
+    }
+
+    84.9% {
+        visibility: visible;
+    }
+
+    85% {
+        visibility: hidden;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes showModal {
+    0% {
+        left: auto;
+    }
+
+    100% {
+        left: auto;
+    }
+}
+
+@keyframes showMenu {
+    0% {
+        left: auto;
+    }
+
+    100% {
+        left: auto;
+    }
+}

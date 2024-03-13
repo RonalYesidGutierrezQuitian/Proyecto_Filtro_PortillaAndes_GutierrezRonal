@@ -1,0 +1,16 @@
+.dialog{
+    animation: closeDialog 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes closeDialog {
+    0% {
+        
+    }
+
+    100% {
+        display: none;
+    }
+}
